@@ -5,3 +5,9 @@ body {
   background: linear-gradient(160deg, #0d1b2a, #1b263b);
   color: #fff;
 }
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+}

@@ -65,3 +65,24 @@
   color: #ff6b6b;
   margin-top: 10px;
 }
+@media (max-width: 768px) {
+  .owner-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+  .letter-item {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  .login-form {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  .password-input {
+    font-size: 0.9rem;
+  }
+  .login-button, .logout-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}

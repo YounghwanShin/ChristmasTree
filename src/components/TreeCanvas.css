@@ -1,53 +1,43 @@
 .tree-canvas-wrapper {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column; /* 트리와 버튼의 수직 정렬 */
   width: 100%;
-  min-height: 600px;
+  min-height: 80vh; /* 화면 높이의 80%를 차지하도록 설정 */
+  margin-top: 10px; /* 상단 간격 조정 */
 }
 
 .tree-canvas {
   position: relative;
-  width: 500px;
-  height: 600px;
-  background-color: transparent;
-  margin: 0 auto;
+  width: 90%; /* 좁은 화면에서 비율에 맞게 조정 */
+  max-width: 500px; /* 최대 크기 제한 */
+  height: auto;
 }
 
+/* 트리 이미지 크기는 100%로 늘이되, 비율은 유지 */
 .tree-image {
-  position: absolute;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  left: 50%;
-  transform: translateX(-50%);
+  height: auto;
 }
 
 .decoration-wrapper {
-  position: absolute;
-  transform: translate(-50%, -50%);
+  position: absolute; /* 트리 내부에서 배치 */
+  transform: translate(-50%, -50%); 
+  /* ↑ (x, y)를 장식품의 중앙으로 삼고 싶다면 유지, 
+     꼭짓점 기준으로 하고 싶다면 이 줄 지우기 */
 }
 
 .ornament-img {
-  width: 40px;
-  height: 40px;
+  width: 30px; /* 장식품 크기 */
+  height: 30px;
   pointer-events: none;
 }
 
 .nickname {
-  margin-top: 4px;
-  font-size: 0.8rem;
-  color: #ffffff;
-  text-shadow: 
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000,
-    0 0 5px rgba(0, 0, 0, 0.7);
-  font-weight: bold;  
-  white-space: nowrap;
-  letter-spacing: 0.5px; 
+  font-size: 0.7rem; /* 이름 글씨 크기 */
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .submit-button {
@@ -65,6 +55,7 @@
 .submit-button:hover {
   background-color: #ff7675; 
 }
+
 .nav-button {
   position: absolute;
   top: 50%;
@@ -90,4 +81,30 @@
 .nav-button.disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .tree-canvas {
+    width: 90%;
+    height: auto;
+  }
+
+  .tree-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-button {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .ornament-img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .nickname {
+    font-size: 0.6rem;
+  }
 }
