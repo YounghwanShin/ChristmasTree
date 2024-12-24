@@ -7,8 +7,7 @@ function OwnerView() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const OWNER_PASSWORD = '1224';  
-
+  // 오너 비밀번호 체크 -> sessionStorage 사용(임시)
   useEffect(() => {
     const authStatus = sessionStorage.getItem('treeOwnerAuth');
     if (authStatus === 'true') {
@@ -18,19 +17,32 @@ function OwnerView() {
   }, []);
 
   const loadLetters = () => {
-    const stored = JSON.parse(localStorage.getItem('letters')) || [];
-    setLetters(stored);
+    fetch('http://localhost:4000/api/owner-letters')
+      .then((res) => res.json())
+      .then((data) => setLetters(data))
+      .catch((err) => console.error(err));
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    if (password === OWNER_PASSWORD) {
-      setIsAuthenticated(true);
-      sessionStorage.setItem('treeOwnerAuth', 'true');
-      loadLetters();
-      setError('');
-    } else {
-      setError('비밀번호가 올바르지 않습니다.');
+    try {
+      const res = await fetch('http://localhost:4000/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password }),
+      });
+      const result = await res.json();
+      if (result.success) {
+        setIsAuthenticated(true);
+        sessionStorage.setItem('treeOwnerAuth', 'true');
+        setError('');
+        loadLetters();
+      } else {
+        setError('비밀번호가 올바르지 않습니다.');
+      }
+    } catch (err) {
+      console.error(err);
+      setError('서버 통신 오류가 발생했습니다.');
     }
   };
 

@@ -1,28 +1,29 @@
 .tree-canvas-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   width: 100%;
-  min-height: 80vh; 
-  margin-top: 10px; 
+  min-height: 80vh;
+  margin-top: 10px;
 }
 
 .tree-canvas {
   position: relative;
   width: 90%;
   max-width: 500px; 
-  height: auto;
 }
 
 .tree-image {
   width: 100%;
   height: auto;
+  display: block;
 }
 
+
 .decoration-wrapper {
-  position: absolute; 
-  transform: translate(-50%, -50%); 
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 .ornament-img {
@@ -83,12 +84,6 @@
 @media (max-width: 480px) {
   .tree-canvas {
     width: 90%;
-    height: auto;
-  }
-
-  .tree-image {
-    width: 100%;
-    height: auto;
   }
 
   .nav-button {
