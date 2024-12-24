@@ -10,32 +10,29 @@
 
 .tree-canvas {
   position: relative;
-  width: 90%; /* 좁은 화면에서 비율에 맞게 조정 */
-  max-width: 500px; /* 최대 크기 제한 */
+  width: 90%;
+  max-width: 500px; 
   height: auto;
 }
 
-/* 트리 이미지 크기는 100%로 늘이되, 비율은 유지 */
 .tree-image {
   width: 100%;
   height: auto;
 }
 
 .decoration-wrapper {
-  position: absolute; /* 트리 내부에서 배치 */
+  position: absolute; 
   transform: translate(-50%, -50%); 
-  /* ↑ (x, y)를 장식품의 중앙으로 삼고 싶다면 유지, 
-     꼭짓점 기준으로 하고 싶다면 이 줄 지우기 */
 }
 
 .ornament-img {
-  width: 30px; /* 장식품 크기 */
+  width: 30px;
   height: 30px;
   pointer-events: none;
 }
 
 .nickname {
-  font-size: 0.7rem; /* 이름 글씨 크기 */
+  font-size: 0.7rem;
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
