@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/ChrismasTree/static/css/main.6884e81d.css",
+    "main.js": "/ChrismasTree/static/js/main.c5f77063.js",
+    "static/media/ornament1.png": "/ChrismasTree/static/media/ornament1.335cb2ebd48ff6909b9c.png",
+    "static/media/ornament3.png": "/ChrismasTree/static/media/ornament3.b72adab2a17f23812813.png",
+    "static/media/ornament2.png": "/ChrismasTree/static/media/ornament2.9db190c0c45a0e915be5.png",
+    "static/media/tree.png": "/ChrismasTree/static/media/tree.2b1cc22f5ed1092b1e20.png",
+    "static/media/ornament6.png": "/ChrismasTree/static/media/ornament6.3108db6c035e505b479c.png",
+    "static/media/ornament8.png": "/ChrismasTree/static/media/ornament8.8e9a6c48bf6aa9370f49.png",
+    "static/media/ornament7.png": "/ChrismasTree/static/media/ornament7.62d4045f93e90f61a93d.png",
+    "static/media/ornament5.png": "/ChrismasTree/static/media/ornament5.4996ef1cf5755a32624c.png",
+    "index.html": "/ChrismasTree/index.html",
+    "main.6884e81d.css.map": "/ChrismasTree/static/css/main.6884e81d.css.map",
+    "main.c5f77063.js.map": "/ChrismasTree/static/js/main.c5f77063.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6884e81d.css",
+    "static/js/main.c5f77063.js"
+  ]
+}
