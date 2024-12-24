@@ -17,7 +17,7 @@ function OwnerView() {
   }, []);
 
   const loadLetters = () => {
-    fetch('http://localhost:4000/api/owner-letters')
+    fetch('https://chrismastree.onrender.com/api/owner-letters')
       .then((res) => res.json())
       .then((data) => setLetters(data))
       .catch((err) => console.error(err));
@@ -26,7 +26,7 @@ function OwnerView() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:4000/api/login', {
+      const res = await fetch('https://chrismastree.onrender.com/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ password }),
