@@ -90,7 +90,7 @@ textarea {
   height: 50px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .ornament-form-modal {
     width: 90%;
     max-height: 80%;
