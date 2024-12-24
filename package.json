@@ -2,6 +2,7 @@
   "name": "my-christmas-tree",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/YounghwanShin/ChrismasTree.git",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^18.3.1",
