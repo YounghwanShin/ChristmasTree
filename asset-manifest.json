@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ChristmasTree/static/css/main.6884e81d.css",
-    "main.js": "/ChristmasTree/static/js/main.cd0cf20d.js",
+    "main.js": "/ChristmasTree/static/js/main.dbb646f5.js",
     "static/media/ornament1.png": "/ChristmasTree/static/media/ornament1.335cb2ebd48ff6909b9c.png",
     "static/media/ornament3.png": "/ChristmasTree/static/media/ornament3.b72adab2a17f23812813.png",
     "static/media/ornament2.png": "/ChristmasTree/static/media/ornament2.9db190c0c45a0e915be5.png",
@@ -12,10 +12,10 @@
     "static/media/ornament5.png": "/ChristmasTree/static/media/ornament5.4996ef1cf5755a32624c.png",
     "index.html": "/ChristmasTree/index.html",
     "main.6884e81d.css.map": "/ChristmasTree/static/css/main.6884e81d.css.map",
-    "main.cd0cf20d.js.map": "/ChristmasTree/static/js/main.cd0cf20d.js.map"
+    "main.dbb646f5.js.map": "/ChristmasTree/static/js/main.dbb646f5.js.map"
   },
   "entrypoints": [
     "static/css/main.6884e81d.css",
-    "static/js/main.cd0cf20d.js"
+    "static/js/main.dbb646f5.js"
   ]
 }
