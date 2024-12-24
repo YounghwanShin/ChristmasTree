@@ -1,9 +1,3 @@
-/**
- * src/pages/Home.jsx
- * - 서버에서 decorations, letters 불러오기
- * - 새 장식 등록 시 (ornamentSrc, nickname, letter)만 POST
- * - x, y 없이 저장
- */
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import OrnamentForm from '../components/OrnamentForm';
@@ -16,14 +10,10 @@ function Home() {
   const [showForm, setShowForm] = useState(false);
   const navigate = useNavigate();
 
-  // 페이지 로드 시 DB에서 decorations, letters 불러오기
   useEffect(() => {
-    // decorations
     fetch('http://localhost:4000/api/decorations')
       .then((res) => res.json())
       .then((data) => {
-        // 여기서는 서버에서 이미 정렬된 데이터를 주므로, 
-        // 추가 정렬 없이 그대로 setDecorations
         setDecorations(data);
       })
       .catch((err) => console.error(err));
@@ -38,11 +28,9 @@ function Home() {
   const openForm = () => setShowForm(true);
   const closeForm = () => setShowForm(false);
 
-  // OrnamentForm에서 받은 { ornamentSrc, nickname, letter }
   const handleAddDecoration = async (decoration) => {
     try {
-      // 서버에 POST
-      const response = await fetch('http://localhost:4000/api/decorations', {
+      const response = await fetch('https://chrismastree.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(decoration),
@@ -52,13 +40,11 @@ function Home() {
         throw new Error('서버에 장식 추가 실패');
       }
 
-      // 등록 성공 후 다시 fetch
       const [updatedDecorations, updatedLetters] = await Promise.all([
         fetch('http://localhost:4000/api/decorations').then((res) => res.json()),
         fetch('http://localhost:4000/api/letters').then((res) => res.json()),
       ]);
 
-      // 서버에서 /api/decorations 시 id 오름차순 정렬된 데이터가 온다
       setDecorations(updatedDecorations);
       setLetters(updatedLetters);
     } catch (error) {
@@ -69,7 +55,6 @@ function Home() {
     }
   };
 
-  // “영환 인증” 버튼
   const handleOwnerAuth = () => {
     navigate('/owner');
   };
@@ -85,7 +70,6 @@ function Home() {
 
       <p>🌟 현재 트리에 남겨진 편지 개수: {letters.length}</p>
 
-      {/* decorations를 TreeCanvas에 넘기면, index 기반으로 positions 배치 */}
       <TreeCanvas decorations={decorations} />
 
       <div className="button-container">
