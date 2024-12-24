@@ -21,16 +21,16 @@ function TreeCanvas({ decorations }) {
       const { width, height } = treeImg.getBoundingClientRect();
 
       const newPositions = [
-        { x: width * 0.5, y: height * 0.2 },
-        { x: width * 0.4, y: height * 0.35 },
-        { x: width * 0.6, y: height * 0.35 },
-        { x: width * 0.3, y: height * 0.5 },
-        { x: width * 0.5, y: height * 0.5 },
-        { x: width * 0.7, y: height * 0.5 },
-        { x: width * 0.3, y: height * 0.65 },
-        { x: width * 0.5, y: height * 0.65 },
-        { x: width * 0.7, y: height * 0.65 },
-        { x: width * 0.5, y: height * 0.8 },
+        { x: width * 0.5,  y: height * 0.15 },
+        { x: width * 0.4,  y: height * 0.35 },
+        { x: width * 0.6,  y: height * 0.35 },
+        { x: width * 0.3,  y: height * 0.55 },
+        { x: width * 0.5,  y: height * 0.55 },
+        { x: width * 0.7,  y: height * 0.55 },
+        { x: width * 0.20, y: height * 0.75 },
+        { x: width * 0.40, y: height * 0.75 },
+        { x: width * 0.60, y: height * 0.75 },
+        { x: width * 0.80, y: height * 0.75 },
       ];
 
       setPositions(newPositions);
